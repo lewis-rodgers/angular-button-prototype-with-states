@@ -1,0 +1,129 @@
+.spinner {
+	display: inline-block;
+	vertical-align: middle;
+	width: 0;
+	overflow: hidden;
+
+	&.active {
+		margin-right: 1em;
+		width: auto;
+	}
+}
+
+.spinner--sm {
+	font-size: 5px;
+	line-height: 1em;
+}
+
+.spinner--one,
+.spinner--two,
+.spinner--three {
+	display: inline-block;
+	height: 1em;
+	width: 1em;
+	margin-right: 1em;
+	border-radius: 50%;
+}
+.spinner--one { animation: throbber-loader 1000ms 150ms infinite ease-out; }
+.spinner--two { animation: throbber-loader 1000ms 300ms infinite ease-out; }
+.spinner--three { animation: throbber-loader 1000ms 450ms infinite ease-out; }
+
+
+/* Progress bar */
+.progress-bar {
+	position: absolute;
+	opacity: 0;
+	left: 0;
+	bottom: 0;;
+	height: 3px;
+	width: 100%;
+	border-radius: .3em;
+	background: #eee;
+
+	&:after {
+		display: block;
+		content: '';
+		height: 3px;
+		width: 10%;
+		border-radius: .3em;
+		background: #ed218d;
+
+		animation: progress-loader 3000ms infinite;
+	}
+}
+.spinner.active .progress-bar {
+	opacity: 1;
+}
+
+@keyframes progress-loader {
+	10% {
+		width: 10%;
+	}
+	50% {
+		width: 60%
+	}
+	100% {
+		width: 100%;
+	}
+}
+
+@keyframes throbber-loader {
+	0% { background: #dde2e7; }
+	50% { background: #6b9dc8; }
+	100% { background: #dde2e7; }
+}
+
+// Stylized button
+.button {
+	display: inline-block;
+	position: relative;
+	line-height: 2.3em;
+	text-align: center;
+	cursor: pointer;
+	padding: 0 1em;
+	border: 1px solid #ed218d;
+	border-radius: .3em;
+	box-shadow: 0 1px 1px rgba(0,0,0,.1);
+	background: #fff;
+
+	user-select: none;
+	appearance: none;
+
+	&:focus {
+		border-color: #1385e5;
+		box-shadow: 0 0 0 3px rgba(19, 133, 229, 0.1);
+		color: #333333;
+		outline: none;
+	}
+
+	&[disabled] {
+		cursor: wait;
+	}
+}
+
+
+
+
+
+
+// You don't have to worry about this...
+html,
+body {
+	font-size: 14px;
+}
+
+.container {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	padding-top: 5em;
+	text-align: center;
+	background: #ed218d; /* Old browsers */
+	background: -moz-linear-gradient(-45deg, #ed218d 0%, #690b7a 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg, #ed218d 0%,#690b7a 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg, #ed218d 0%,#690b7a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ed218d', endColorstr='#690b7a',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}

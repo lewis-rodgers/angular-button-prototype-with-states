@@ -1,0 +1,26 @@
+{
+  "name": "fantastic-memory",
+  "version": "1.0.0",
+  "description": "Angular button with states prototype",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lewis-rodgers/fantastic-memory.git"
+  },
+  "keywords": [],
+  "author": "Lewis Rodgers",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lewis-rodgers/fantastic-memory/issues"
+  },
+  "homepage": "https://github.com/lewis-rodgers/fantastic-memory#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0"
+  },
+  "dependencies": {}
+}
