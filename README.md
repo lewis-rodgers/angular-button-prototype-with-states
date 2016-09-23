@@ -1,4 +1,4 @@
-# Angular button with state prototype
+# Angular button prototype with states
 
 Open `index.html`
 
